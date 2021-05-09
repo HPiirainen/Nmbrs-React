@@ -12,7 +12,7 @@
   "dependencies": {
     "boardgame.io": "^0.32.0",
     "classnames": "^2.2.6",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "normalize.css": "^8.0.1",
     "react": "^16.8.6",
     "react-confirm-alert": "^2.4.1",
