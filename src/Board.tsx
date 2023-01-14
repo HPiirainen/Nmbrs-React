@@ -9,9 +9,7 @@ import exampleImage from './example.png';
 import githubLogo from './GitHub-Mark.png';
 import './Board.css';
 
-interface GameProps extends BoardProps<GameState> {
-
-};
+interface GameProps extends BoardProps<GameState> {};
 
 export default function NmbrsBoard(props: GameProps) {
 
@@ -154,16 +152,16 @@ export default function NmbrsBoard(props: GameProps) {
   }, []);
 
   // Make Undo button disabled if nothing to undo
-  const undoButtonClassNames: string = classNames({
-    'disabled': isEmpty(ctx.numMoves)
-  });
+  // const undoButtonClassNames: string = classNames({
+  //   'disabled': isEmpty(ctx.numMoves)
+  // });
 
   return (
     <div className="wrap">
       <div className="sidebar column">
         <div className="controls">
           <h2>Controls</h2>
-          <p className="turn-indicator">Turns: <strong>{ ctx.turn }</strong></p>
+          <p className="turn-indicator">Turns: <strong>{ G.drawCounter }</strong></p>
           <div className="buttons">
             <button
               title="Append existing numbers to the grid"
@@ -173,7 +171,6 @@ export default function NmbrsBoard(props: GameProps) {
             </button>
             <button
               title="Undo last move"
-              className={ undoButtonClassNames }
               onClick={() => onUndoClick()}
             >
               Undo

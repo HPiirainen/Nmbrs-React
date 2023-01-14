@@ -22,6 +22,7 @@ export interface Selection {
 export interface GameState {
   grid: Grid;
   selection: Selection[];
+  drawCounter: number;
 };
 
 const initGrid = (): Grid => {
@@ -108,6 +109,7 @@ export const Nmbrs: Game<GameState> = {
   setup: (): GameState => ({
     grid: initGrid(),
     selection: [],
+    drawCounter: 0,
   }),
 
   moves: {
@@ -147,6 +149,7 @@ export const Nmbrs: Game<GameState> = {
         newGrid = compactGrid(newGrid);
         console.log(newGrid);
         G.grid = newGrid;
+        G.drawCounter++;
       },
       undoable: false,
     },
