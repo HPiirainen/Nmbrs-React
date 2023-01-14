@@ -4,7 +4,6 @@ import Board from './Board';
 import './App.css';
 
 const App = Client({
-  name: 'NMBRS',
   numPlayers: 1,
   game: Nmbrs,
   board: Board,
